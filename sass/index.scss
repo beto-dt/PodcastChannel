@@ -1,21 +1,31 @@
 *{
     box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 body{
     margin: 0;
 
 }
+a {
+  text-decoration: none;
+}
+$backgroundBlueOne : #0000EC;
+$hover : #00F3BB;
+$active : rgba(6,10,36,0.56);
+$linkBlack : #060A24;
+
 .header-wrapper{
     height: 44px;
     display: flex;
     justify-content: space-between;
     padding: 0 16px;
     align-items: center;
+    position: relative;
 }
 
 .navegation{
-    .menu-checkbox{
+    .menu-checkbox-class{
       position: absolute;
       visibility: hidden;
       opacity: 0;
@@ -23,14 +33,80 @@ body{
     .close{
       display: none;
     }
-    .menu-checkbox:checked ~ .label{
+    .menu{
+     display: none;
+     position: absolute;
+     top: 44px;
+     background: $backgroundBlueOne;
+     left: 0;
+     width: 100%;
+     padding: 4px 16px 12px ;
+     .menu-link{
+         padding: 12px 0;
+         a{
+             font-size: 16px;
+             color: #ffffff;
+             line-height: 28px;
+             &:hover{
+                 color: $hover;
+                 text-decoration: line-through;
+             }
+             &:active{
+                 color: $active;
+                 text-decoration: line-through;
+
+             }
+         }
+     }
+    }
+    .menu-checkbox-class:checked {
+       & ~ .menu{
+            display: block;
+        }
+    }
+    &  ~ .label{
         .hamburger{
             display: none;
         }
         .close{
             display: block;
         }
+        
     }
-    
 
+}
+
+/////////////////DESKTOP////////////////
+
+@media (min-width:1440px){
+    .header-wrapper{
+        height: 80px;
+        padding: 0 100px;
+
+        .logo-wrapper{
+           .image {
+               width: 36px;
+               height: 36px;
+           }
+        }
+    }
+    .navegation{
+        
+        .label{
+            display: none;
+        }
+        .menu{
+            display: flex;
+            background-color: transparent;
+            position: initial;
+            padding: 0 ;
+            .menu-link{
+                padding: 0 24px;
+                a{
+                    color: $linkBlack;
+                }
+                
+            }
+        }
+    }
 }

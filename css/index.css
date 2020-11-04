@@ -1,9 +1,14 @@
 * {
   box-sizing: border-box;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 body {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .header-wrapper {
@@ -12,9 +17,10 @@ body {
   justify-content: space-between;
   padding: 0 16px;
   align-items: center;
+  position: relative;
 }
 
-.navegation .menu-checkbox {
+.navegation .menu-checkbox-class {
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -22,11 +28,66 @@ body {
 .navegation .close {
   display: none;
 }
-.navegation .menu-checkbox:checked ~ .label .hamburger {
+.navegation .menu {
+  display: none;
+  position: absolute;
+  top: 44px;
+  background: #0000EC;
+  left: 0;
+  width: 100%;
+  padding: 4px 16px 12px;
+}
+.navegation .menu .menu-link {
+  padding: 12px 0;
+}
+.navegation .menu .menu-link a {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 28px;
+}
+.navegation .menu .menu-link a:hover {
+  color: #00F3BB;
+  text-decoration: line-through;
+}
+.navegation .menu .menu-link a:active {
+  color: rgba(6, 10, 36, 0.56);
+  text-decoration: line-through;
+}
+.navegation .menu-checkbox-class:checked ~ .menu {
+  display: block;
+}
+.navegation ~ .label .hamburger {
   display: none;
 }
-.navegation .menu-checkbox:checked ~ .label .close {
+.navegation ~ .label .close {
   display: block;
+}
+
+@media (min-width: 1440px) {
+  .header-wrapper {
+    height: 80px;
+    padding: 0 100px;
+  }
+  .header-wrapper .logo-wrapper .image {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navegation .label {
+    display: none;
+  }
+  .navegation .menu {
+    display: flex;
+    background-color: transparent;
+    position: initial;
+    padding: 0;
+  }
+  .navegation .menu .menu-link {
+    padding: 0 24px;
+  }
+  .navegation .menu .menu-link a {
+    color: #060A24;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
