@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+}
+
 .header-wrapper {
   height: 44px;
   display: flex;
@@ -63,6 +67,114 @@ a {
   display: block;
 }
 
+.fluid {
+  padding: 0 16px;
+}
+
+.cross {
+  text-decoration: line-through;
+}
+
+.cta {
+  background: #00F3BB;
+  width: 288px;
+  padding: 13px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cta:hover {
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+  color: #fff;
+}
+
+.welcome .welcome-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  color: #060A24;
+  line-height: 42px;
+  margin-bottom: 16px;
+}
+.welcome .description {
+  color: #060A24;
+  line-height: 22px;
+  margin-bottom: 32px;
+}
+.welcome .actions {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.podcats {
+  position: relative;
+  padding: 10px 10px;
+  margin: 48px 0;
+}
+.podcats:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  background: #0000EC;
+  top: 0;
+  left: 0;
+  transform: skew(0, -10deg);
+  z-index: 0;
+}
+.podcats .podcats-title {
+  z-index: 1;
+  color: #fff;
+  font-size: 36px;
+  position: relative;
+}
+.podcats .podcats-wrapper {
+  z-index: 1;
+  position: relative;
+}
+.podcats .podcats-wrapper .iframe {
+  height: 255px;
+  border: none;
+  width: 100%;
+}
+
+.about {
+  margin-top: -100px;
+  z-index: 2;
+  position: relative;
+}
+.about .phone-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.about .phone-wrapper .image {
+  max-width: 360px;
+  width: 100%;
+}
+.about .content {
+  padding: 0 16px;
+}
+.about .content .title {
+  font-size: 36px;
+}
+.about .content .description {
+  line-height: 22px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 600px) {
+  .welcome .welcome-title br {
+    display: none;
+  }
+
+  .podcats {
+    padding: 40px 100px 80px;
+  }
+  .podcats::before {
+    transform: skew(0, -6deg);
+  }
+}
 @media (min-width: 1440px) {
   .header-wrapper {
     height: 80px;
@@ -87,6 +199,62 @@ a {
   }
   .navegation .menu .menu-link a {
     color: #060A24;
+  }
+
+  .welcome {
+    margin-left: 200px;
+    margin-top: 120px;
+  }
+  .welcome .welcome-title {
+    font-size: 64px;
+    margin-bottom: 0;
+  }
+  .welcome .description {
+    font-size: 16px;
+    width: 628px;
+  }
+  .welcome .actions {
+    justify-content: flex-start;
+  }
+
+  .podcats {
+    padding: 40px 100px 80px;
+  }
+  .podcats::before {
+    transform: skew(0, -4deg);
+  }
+  .podcats .podcats-title {
+    padding-left: 100px;
+    margin-bottom: 26px;
+    font-size: 48px;
+  }
+  .podcats .podcats-wrapper {
+    width: 1280px;
+    height: 536px;
+    align-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .podcats .podcats-wrapper .iframe {
+    width: 580px;
+    height: 232px;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    width: 1280px;
+    margin: 0 auto;
+  }
+  .about .phone-wrapper .image {
+    max-height: 457px;
+  }
+  .about .content .title br {
+    display: none;
+  }
+  .about .content .description {
+    width: 458px;
   }
 }
 

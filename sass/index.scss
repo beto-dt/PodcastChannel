@@ -10,6 +10,11 @@ body{
 a {
   text-decoration: none;
 }
+
+button{
+    border: none;
+}
+
 $backgroundBlueOne : #0000EC;
 $hover : #00F3BB;
 $active : rgba(6,10,36,0.56);
@@ -76,6 +81,121 @@ $linkBlack : #060A24;
 
 }
 
+.fluid{
+    padding: 0 16px;
+}
+.cross{
+    text-decoration: line-through;
+}
+.cta{
+    background: $hover;
+    width: 288px;
+    padding: 13px 0;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover{
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        color: #fff;
+    }
+
+}
+
+.welcome{
+    .welcome-title{
+       font-family: 'IBM Plex Sans', sans-serif;
+       font-size: 36px;
+       color: $linkBlack;
+       line-height: 42px;
+       margin-bottom: 16px;
+    }
+    .description{
+     color: $linkBlack;
+     line-height: 22px;
+     margin-bottom: 32px;
+    }
+    .actions{
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+
+    }
+}
+
+.podcats{
+    position: relative;
+    padding: 10px 10px;
+    margin: 48px 0;
+    &:before{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: '';
+        display: block;
+        background: $backgroundBlueOne;
+        top: 0;
+        left: 0;
+        transform: skew(0,-10deg);
+        z-index: 0;
+    }
+    .podcats-title{
+        z-index: 1;
+        color: #fff;
+        font-size: 36px;
+        position: relative;
+    }
+    .podcats-wrapper{
+        z-index: 1;
+        position: relative;
+        .iframe{
+            height: 255px;
+            border:none;
+            width: 100%;
+        }
+    }
+}
+
+.about{
+    margin-top: -100px;
+    z-index: 2;
+    position: relative;
+    .phone-wrapper{
+        display: flex;
+        justify-content: center;
+        .image{
+            max-width: 360px;
+            width: 100%;
+        }
+    }
+ .content{
+     padding: 0 16px;
+     .title{
+         font-size: 36px;
+     }
+     .description{
+         line-height: 22px;
+         font-size: 14px;
+         margin-bottom: 8px;
+     }
+ }
+}
+
+/////////////////TABLET////////////////
+@media (min-width: 600px){
+    .welcome{
+        .welcome-title{
+            br{
+                display: none;
+            }
+        }
+    }
+    .podcats {
+        padding: 40px 100px 80px;
+        &::before{
+            transform: skew(0,-6deg);
+        }
+    }
+}
+
 /////////////////DESKTOP////////////////
 
 @media (min-width:1440px){
@@ -106,6 +226,66 @@ $linkBlack : #060A24;
                     color: $linkBlack;
                 }
                 
+            }
+        }
+    }
+    .welcome{
+        margin-left: 200px;
+        margin-top: 120px;
+        .welcome-title{
+            font-size: 64px;
+            margin-bottom: 0; 
+        }
+        .description{
+            font-size: 16px;
+            width: 628px;
+        }
+        .actions{
+            justify-content: flex-start;
+        }
+    }
+    .podcats{
+        padding: 40px 100px 80px;
+        &::before{
+            transform: skew(0,-4deg);
+        }
+        .podcats-title{
+            padding-left: 100px;
+            margin-bottom: 26px;
+            font-size: 48px;
+        }
+        .podcats-wrapper{
+            width: 1280px;
+            height: 536px;
+            align-content:space-between;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .iframe{
+                width: 580px;
+                height: 232px;
+            }
+        }
+    }
+    .about{
+        display: flex;
+        align-items: center;
+        width: 1280px;
+        margin: 0 auto;
+        .phone-wrapper{
+            .image{
+                max-height: 457px;
+            }
+        }
+        .content{
+            .title{
+                br{
+                  display: none;  
+                }
+            }
+            .description{
+                width: 458px;
+
             }
         }
     }
