@@ -155,7 +155,7 @@ $linkBlack : #060A24;
 }
 
 .about{
-    margin-top: -100px;
+    margin-top: -60px;
     z-index: 2;
     position: relative;
     .phone-wrapper{
@@ -178,6 +178,97 @@ $linkBlack : #060A24;
      }
  }
 }
+
+.invite{
+    margin-top: -10px;
+    z-index: 3;
+    position: relative; 
+    .group{
+        display: flex;
+        flex-direction: column;
+        .image{
+            width: 100%;
+        }
+    }
+    .content{
+        padding: 0 16px;
+        .title{
+            font-size: 36px;
+        }
+    }
+}
+
+.service{
+    margin-top: -10px;
+    z-index: 4;
+    position: relative; 
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       .card-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+
+    }
+    .content{
+        padding: 0 16px;
+        .title{
+            font-size: 36px;
+        }
+}
+}
+
+.last{
+    position: relative;
+    padding: 10px 10px;
+    margin: 48px 0;
+    &:before{
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        content: '';
+        display: block;
+        background: $backgroundBlueOne;
+        top: 0;
+        left: 0;
+        transform: skew(0,-0deg);
+        z-index: 0;
+    }
+    .last-title{
+        font-size: 21px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 42px;
+        position: relative;
+    }
+    .last-wrapper{
+        z-index: 1;
+        position: relative;
+        left: 30px;
+    }
+
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .social{
+       display: flex;
+       justify-content: center;
+       flex-direction: row;
+       .social-icon{
+           position: relative;
+           margin-right: 30px;
+
+       }
+    }
+   
+ }
 
 /////////////////TABLET////////////////
 @media (min-width: 600px){
@@ -270,11 +361,11 @@ $linkBlack : #060A24;
     .about{
         display: flex;
         align-items: center;
-        width: 1280px;
+        width: 900px;
         margin: 0 auto;
         .phone-wrapper{
             .image{
-                max-height: 457px;
+                max-height: 600px;
             }
         }
         .content{
@@ -289,4 +380,108 @@ $linkBlack : #060A24;
             }
         }
     }
+    .invite{
+        margin-top: -10px;
+        z-index: 2;
+        position: relative; 
+        .group{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .image{
+                width: 480px;
+                height:364px ;
+            }
+        }
+        .content{
+            padding: 0 200px;
+            .title{
+                font-size: 36px;
+            }
+            .description{
+                line-height: 22px;
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+    .service{
+        margin-top: -10px;
+        z-index: 4;
+        position: relative; 
+        .card{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: relative;
+            top: 50px;
+           .card-title{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               position: relative;
+               margin-left: 72px;
+           }
+    
+        }
+        .content{
+            padding: 0 16px;
+            .title{
+                font-size: 36px;
+            }
+    }
+    }
+    .last{
+        position: relative;
+        padding: 10px 10px;
+        margin: 80px 0;
+        &:before{
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            content: '';
+            display: block;
+            background: $backgroundBlueOne;
+            top: 0;
+            left: 0;
+            transform: skew(0,-0deg);
+            z-index: 0;
+        }
+        .last-title{
+            font-size: 21px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 42px;
+            position: relative;
+        }
+        .last-wrapper{
+            z-index: 1;
+            position: relative;
+            left: 571px;
+            top: 20px;
+        }
+    
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        position: relative;
+        top: 33px;
+        .social{
+           display: flex;
+           justify-content: center;
+           flex-direction: row;
+           position: relative;
+           margin-left: 950px;
+           .social-icon{
+               position: relative;
+               margin-right: 30px;
+    
+           }
+        }
+       
+     }
+  
 }

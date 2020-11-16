@@ -139,7 +139,7 @@ button {
 }
 
 .about {
-  margin-top: -100px;
+  margin-top: -60px;
   z-index: 2;
   position: relative;
 }
@@ -161,6 +161,94 @@ button {
   line-height: 22px;
   font-size: 14px;
   margin-bottom: 8px;
+}
+
+.invite {
+  margin-top: -10px;
+  z-index: 3;
+  position: relative;
+}
+.invite .group {
+  display: flex;
+  flex-direction: column;
+}
+.invite .group .image {
+  width: 100%;
+}
+.invite .content {
+  padding: 0 16px;
+}
+.invite .content .title {
+  font-size: 36px;
+}
+
+.service {
+  margin-top: -10px;
+  z-index: 4;
+  position: relative;
+}
+.service .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service .card .card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.service .content {
+  padding: 0 16px;
+}
+.service .content .title {
+  font-size: 36px;
+}
+
+.last {
+  position: relative;
+  padding: 10px 10px;
+  margin: 48px 0;
+}
+.last:before {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  content: "";
+  display: block;
+  background: #0000EC;
+  top: 0;
+  left: 0;
+  transform: skew(0, 0deg);
+  z-index: 0;
+}
+.last .last-title {
+  font-size: 21px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 42px;
+  position: relative;
+}
+.last .last-wrapper {
+  z-index: 1;
+  position: relative;
+  left: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .social {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.footer .social .social-icon {
+  position: relative;
+  margin-right: 30px;
 }
 
 @media (min-width: 600px) {
@@ -244,17 +332,120 @@ button {
   .about {
     display: flex;
     align-items: center;
-    width: 1280px;
+    width: 900px;
     margin: 0 auto;
   }
   .about .phone-wrapper .image {
-    max-height: 457px;
+    max-height: 600px;
   }
   .about .content .title br {
     display: none;
   }
   .about .content .description {
     width: 458px;
+  }
+
+  .invite {
+    margin-top: -10px;
+    z-index: 2;
+    position: relative;
+  }
+  .invite .group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .invite .group .image {
+    width: 480px;
+    height: 364px;
+  }
+  .invite .content {
+    padding: 0 200px;
+  }
+  .invite .content .title {
+    font-size: 36px;
+  }
+  .invite .content .description {
+    line-height: 22px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .service {
+    margin-top: -10px;
+    z-index: 4;
+    position: relative;
+  }
+  .service .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 50px;
+  }
+  .service .card .card-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-left: 72px;
+  }
+  .service .content {
+    padding: 0 16px;
+  }
+  .service .content .title {
+    font-size: 36px;
+  }
+
+  .last {
+    position: relative;
+    padding: 10px 10px;
+    margin: 80px 0;
+  }
+  .last:before {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    content: "";
+    display: block;
+    background: #0000EC;
+    top: 0;
+    left: 0;
+    transform: skew(0, 0deg);
+    z-index: 0;
+  }
+  .last .last-title {
+    font-size: 21px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 42px;
+    position: relative;
+  }
+  .last .last-wrapper {
+    z-index: 1;
+    position: relative;
+    left: 571px;
+    top: 20px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    top: 33px;
+  }
+  .footer .social {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    margin-left: 950px;
+  }
+  .footer .social .social-icon {
+    position: relative;
+    margin-right: 30px;
   }
 }
 

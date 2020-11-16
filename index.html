@@ -1,74 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto de acamica De La Torre ">
+    <meta name="keywords" content="Acamica,Argentina,Ecuador">
+    <meta name="author" content="Luis Alberto De La Torre Duran">
     <title>Posdcats</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <header class="header-wrapper">
-        <div class="logo-wrapper">
-          <img src="./assets/images/logo.svg" alt="logo" class="image">
+      <div class="logo-wrapper">
+        <img src="./assets/images/logo.svg" alt="logo" class="image" />
+      </div>
+      <div class="navegation">
+        <input
+          type="checkbox"
+          id="menu-checkbox"
+          class="menu-checkbox-class hidden"
+        />
+        <label for="menu-checkbox" class="label">
+          <div><i class="fa fa-bars" aria-hidden="true"></i></div>
+          <div class="close"><i class="fas fa-times"></i></div>
+        </label>
+        <div class="menu">
+          <div class="menu-link">
+            <a href="#">EPISODIOS</a>
+          </div>
+          <div class="menu-link">
+            <a href="#">NOSOTROS</a>
+          </div>
+          <div class="menu-link">
+            <a href="#">ENTREVISTAS</a>
+          </div>
+          <div class="menu-link">
+            <a href="#">TÓPICOS</a>
+          </div>
         </div>
-        <div class="navegation">
-            <input type="checkbox" id="menu-checkbox" class="menu-checkbox-class hidden">
-            <label for="menu-checkbox" class="label">
-                <div><i class="fas fa-bars hamburger"></i></div>
-                <div class="close"><i class="fas fa-times"></i></div>
-            </label>
-            <div class="menu">
-                <div class="menu-link">
-                    <a href="#">Link #1</a>
-                </div>
-                <div class="menu-link">
-                    <a href="#">Link #2</a>
-                </div>
-                <div class="menu-link">
-                    <a href="#">Link #3</a>
-                </div>
-                <div class="menu-link">
-                    <a href="#">Link #4</a>
-                </div>
-            </div>
-        </div>
+      </div>
     </header>
 
     <section class="welcome fluid">
-     <h1 class="welcome-title">
-         Hello <span class="cross">World</span><br>
-         pale blue dot.
-     </h1>
-     <p class="description">
-        Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.
-     </p>
-     <div class="actions">
-         <button class="cta">CONOCE MAS</button>
-     </div>
+      <h1 class="welcome-title">
+        Hello <span class="cross">World</span><br />
+        pale blue dot.
+      </h1>
+      <p class="description">
+        Un podcast que explora el mundo de la programación. Nuevos episodios,
+        todos los jueves cada 15 días.
+      </p>
+      <div class="actions">
+        <button class="cta">CONOCE MAS</button>
+      </div>
     </section>
     <section class="podcats">
-        <h2 class="podcats-title">Canciones</h2>
-        <div class="podcats-wrapper">
-                <iframe class="iframe" src="https://open.spotify.com/embed/episode/7AZZy2nJ4R9ZndHW0h2yxt" allow="encrypted-media"></iframe>
-                <iframe class="iframe" src="https://open.spotify.com/embed/episode/1ezdL2ivAGLwSE6Xbssxqt" allow="encrypted-media"></iframe>
-                <iframe class="iframe" src="https://open.spotify.com/embed/show/5JxcIaIkN8zx3Zy7yD9snv" allow="encrypted-media"></iframe>
-                <iframe class="iframe" src="https://open.spotify.com/embed/episode/31VyAQAwBiKoHVoYUCEzjQ" allow="encrypted-media"></iframe> 
-        </div>
+      <h2 class="podcats-title">Canciones</h2>
+      <div class="podcats-wrapper">
+        <iframe
+          class="iframe"
+          src="https://open.spotify.com/embed/episode/7AZZy2nJ4R9ZndHW0h2yxt"
+          allow="encrypted-media"
+        ></iframe>
+        <iframe
+          class="iframe"
+          src="https://open.spotify.com/embed/episode/1ezdL2ivAGLwSE6Xbssxqt"
+          allow="encrypted-media"
+        ></iframe>
+        <iframe
+          class="iframe"
+          src="https://open.spotify.com/embed/show/5JxcIaIkN8zx3Zy7yD9snv"
+          allow="encrypted-media"
+        ></iframe>
+        <iframe
+          class="iframe"
+          src="https://open.spotify.com/embed/episode/31VyAQAwBiKoHVoYUCEzjQ"
+          allow="encrypted-media"
+        ></iframe>
+      </div>
     </section>
     <section class="about">
       <div class="phone-wrapper">
-          <img class="image" src="./assets/images/phone.png" alt="template-phone">
+        <img
+          class="image"
+          src="./assets/images/phone.png"
+          alt="template-phone"
+        />
       </div>
       <div class="content">
-        <h2 class="title">De Donde <br> Venimos</h2>
+        <h2 class="title">
+          De Donde <br />
+          Venimos
+        </h2>
         <p class="description">
-          Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.<br><br>
-          Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+          Our posturings, our imagined self-importance, the delusion that we
+          have some privileged position in the Universe, are challenged by this
+          point of pale light.<br /><br />
+          Our planet is a lonely speck in the great enveloping cosmic dark. In
+          our obscurity, in all this vastness, there is no hint that help will
+          come from elsewhere to save us from ourselves.
         </p>
       </div>
-    
     </section>
-</body>
+    <section class="invite">
+      <div class="content">
+        <h2 class="title">Invitadas/os estelares</h2>
+      </div>
+      <div class="group">
+        <img
+          class="image"
+          src="./assets/images/grace-hopper.png"
+          alt="grace-hopper"
+        />
+        <img
+          class="image"
+          src="./assets/images/Katie-Bouman.png"
+          alt="Katie-Bouman"
+        />
+        <img
+          class="image"
+          src="./assets/images/Margaret_Hamilton.png"
+          alt="Margaret_Hamilton"
+        />
+        <img
+          class="image"
+          src="./assets/images/An E.R.A.Univac 1103 computer in the 1950s.png"
+          alt="an"
+        />
+        <img
+          class="image"
+          src="./assets/images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png"
+          alt="computer"
+        />
+        <img
+          class="image"
+          src="./assets/images/susan-kare.png"
+          alt="susan-kare"
+        />
+      </div>
+    </section>
+    <section class="service">
+      <div class="content">
+        <h2 class="title">
+          Algunos de <br />
+          nuestros temas
+        </h2>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          <img class="image" src="./assets/images/icon1.svg" alt="icono#1" />
+          <h2 class="title">Trabajo remoto</h2>
+        </div>
+        <div class="card-title">
+          <img class="image" src="./assets/images/icon2.svg" alt="icono#2" />
+          <h2 class="title">
+            Repensando la <br />
+            programación
+          </h2>
+        </div>
+        <div class="card-title">
+          <img class="image" src="./assets/images/icon3.svg" alt="icono#3" />
+          <h2 class="title">Bases del código</h2>
+        </div>
+        <div class="card-title">
+          <img class="image" src="./assets/images/icon4.svg" alt="icono#4" />
+          <h2 class="title">
+            Seguridad <br />
+            informática
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="last">
+      <h2 class="last-title">¿Querés las últimas novedades?</h2>
+      <div class="last-wrapper">
+        <button class="cta">ESCUCHÁ LOS EPISODIOS</button>
+      </div>
+    </section>
+    <section class="footer">
+      <p>Copyright &copy; 2020 All Rights Reserved.</p>
+      <div class="social">
+        <div class="social-icon">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+        <div class="social-icon">
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="social-icon">
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+        </div>
+        <div class="social-icon">
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
